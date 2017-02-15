@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i("info", "onCreate");
 
 //        final Button btnClick = (Button) findViewById(R.id.btnClick);
 //        btnClick.setOnClickListener(view -> {
@@ -48,5 +49,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("info", "onResume");
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("info", "onStart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("info", "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("info", "onDestroy");
+    }
 }
